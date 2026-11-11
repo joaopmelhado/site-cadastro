@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Formulário centralizado, responsivo e com bordas arredondadas */
+    form {
+      background-color: #ffffff;
+      max-width: 450px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    /* Organização dos campos e do layout */
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .opcoes label {
+      display: inline-block;
+      font-weight: normal;
+      margin-right: 15px;
+      margin-top: 0;
+    }
+
+    /* Efeito ao focar (:focus) */
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #007bff;
+      background-color: #f0f8ff;
+    }
+
+    /* Estilo do botão e efeito hover */
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsividade para telas menores */
+    @media (max-width: 480px) {
+      form {
+        padding: 15px;
+      }
+      .opcoes label {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h2>Cadastro</h2>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+
+    <label for="nascimento">Data de nascimento:</label>
+    <input type="date" id="nascimento" name="nascimento" required>
+
+    <label for="curso">Curso:</label>
+    <select id="curso" name="curso" required>
+      <option value="">Selecione um curso...</option>
+      <option value="informatica">Informática</option>
+      <option value="administracao">Administração</option>
+      <option value="design">Design</option>
+    </select>
+
+    <label>Sexo:</label>
+    <div class="opcoes">
+      <label><input type="radio" name="sexo" value="M"> Masculino</label>
+      <label><input type="radio" name="sexo" value="F"> Feminino</label>
+      <label><input type="radio" name="sexo" value="O"> Outro</label>
+    </div>
+
+    <label>Interesses:</label>
+    <div class="opcoes">
+      <label><input type="checkbox" name="interesses" value="tecnologia"> Tecnologia</label>
+      <label><input type="checkbox" name="interesses" value="esportes"> Esportes</label>
+      <label><input type="checkbox" name="interesses" value="musica"> Música</label>
+    </div>
+
+    <label for="comentarios">Comentários:</label>
+    <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+
+    <label for="foto">Upload de foto:</label>
+    <input type="file" id="foto" name="foto" accept="image/*">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
